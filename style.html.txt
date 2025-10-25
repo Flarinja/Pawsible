@@ -1,0 +1,61 @@
+<style>
+.registration-container { background-color: #fff; overflow: hidden; display: flex; gap: 20px; }
+.left-panel { background-color: #f7f7e9; display: flex; flex-grow: 1; justify-content: center; width: 100%; padding: 218px 58px; }
+.logo-wrapper { background-color: #fff; display: flex; flex-direction: column; overflow: hidden; }
+.logo { aspect-ratio: 1.03; object-fit: contain; object-position: center; width: 100%; }
+.right-panel { background-color: #5b2a09; display: flex; width: 100%; flex-direction: column; overflow: hidden; font-family: Inter, sans-serif; margin: 0 auto; padding: 24px 74px 241px; }
+.nav-menu { display: flex; align-items: start; gap: 40px 55px; font-size: 22px; color: #fff; font-weight: 600; flex-wrap: wrap; }
+.nav-item { flex-grow: 1; }
+.registration-form { border-radius: 30px; background-color: #f7f7e9; align-self: center; display: flex; width: 422px; max-width: 100%; flex-direction: column; overflow: hidden; align-items: start; font-size: 16px; color: #000; font-weight: 800; margin: 140px 0 0 12px; padding: 85px 59px; }
+.form-title { font-size: 40px; font-weight: 900; text-align: center; align-self: center; }
+.form-label { margin: 24px 0 0 16px; }
+.form-input { border-radius: 10px; background-color: #bfa99f; display: flex; width: 282px; max-width: 100%; height: 50px; margin: 4px 0 0 10px; }
+.submit-button { border-radius: 10px; background-color: #000; align-self: center; margin-top: 18px; width: 166px; max-width: 100%; overflow: hidden; font-size: 15px; color: #fff; font-weight: 900; text-align: center; padding: 10px 51px; border: 1px solid #000; }
+.divider { align-self: stretch; margin-top: 22px; height: 1px; border: 1px solid #000; }
+.support-text { font-size: 10px; font-weight: 400; text-align: center; align-self: center; margin-top: 13px; }
+.visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+
+@media (max-width: 991px) {
+    .registration-container { flex-direction: column; align-items: stretch; gap: 0; }
+    .left-panel, .right-panel { width: 100%; }
+    .left-panel { max-width: 100%; padding: 100px 20px; }
+    .logo-wrapper { max-width: 100%; }
+    .logo { max-width: 100%; }
+    .right-panel { max-width: 100%; padding: 0 20px 100px; }
+    .nav-menu { max-width: 100%; }
+    .registration-form { margin-top: 40px; padding: 0 20px; }
+    .form-label { margin-left: 10px; }
+    .submit-button { white-space: normal; padding: 10px 20px; }
+}
+</style>
+
+<section class="registration-container">
+    <div class="left-panel">
+        <div class="logo-wrapper">
+            <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/a9bb1379243199ddb2adbfff258fab87089d6b3acae078a1fcfbe65631bbb8f8?placeholderIfAbsent=true&apiKey=9dbea8526c4742e09b1ebb15ce9de7de" class="logo" alt="Company logo" />
+        </div>
+    </div>
+    <div class="right-panel">
+        <nav class="nav-menu">
+            <a href="#" class="nav-item">HOME</a>
+            <a href="#" class="nav-item">LOGIN</a>
+            <a href="#" class="nav-item">ABOUT US</a>
+            <a href="#" class="nav-item">OUR SERVICES</a>
+        </nav>
+        <form class="registration-form">
+            <h2 class="form-title">Registration</h2>
+            <label for="email" class="form-label">Email :</label>
+            <input type="email" id="email" class="form-input" required aria-label="Email">
+            <label for="password" class="form-label">Password :</label>
+            <input type="password" id="password" class="form-input" required aria-label="Password">
+            <label for="confirm-password" class="form-label">Confirm Password :</label>
+            <input type="password" id="confirm-password" class="form-input" required aria-label="Confirm Password">
+            <button type="submit" class="submit-button">Register</button>
+            <hr class="divider">
+            <p class="support-text">
+                Need support?<br />
+                <a href="#" tabindex="0">Click here.</a>
+            </p>
+        </form>
+    </div>
+</section>
